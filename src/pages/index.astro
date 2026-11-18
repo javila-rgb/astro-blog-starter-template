@@ -341,3 +341,8 @@ const posts = (await getCollection('blog'))
 				do {
 					nextIndex = Math.floor(Math.random() * spaceFacts.length);
 				} while (nextIndex === currentIndex && spaceFacts.length > 1);
+
+				currentIndex = nextIndex;
+				factEl.textContent = spaceFacts[currentIndex];
+				factEl.style.setProperty('color', '#ffffff', 'important');
+}
