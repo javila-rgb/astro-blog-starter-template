@@ -127,13 +127,6 @@ const posts = (await getCollection('blog'))
 				background: #334155;
 				border-color: #7dd3fc;
 			}
-			.telemetry-box .telemetry-text {
-				margin: 0;
-				font-size: 1.02rem;
-				font-weight: 400;
-				line-height: 1.6;
-				color: #f8fafc !important;
-			}
 
 			/* Sections & Cards */
 			.section {
@@ -345,4 +338,12 @@ const posts = (await getCollection('blog'))
 				currentIndex = nextIndex;
 				factEl.textContent = spaceFacts[currentIndex];
 				factEl.style.setProperty('color', '#ffffff', 'important');
-}
+			}
+
+			showRandomFact();
+			if (btnEl) {
+				btnEl.addEventListener('click', showRandomFact);
+			}
+		</script>
+	</body>
+</html>
